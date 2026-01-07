@@ -13,9 +13,9 @@ int main(void) {
     // NOT 0x11223344 -> 0xEEDDCCBB
     printf("%08X\n", ~nData);
 
-    // right shift 8 bits -> 0x01122334
+    // right shift 8 bits -> 0x00112233
     printf("%08X\n", nData >> 8);
-    // left shift 16 bits -> 0x223344??
+    // left shift 16 bits -> 0x33440000
     printf("%08X\n", nData << 16);
 
     return 0;
