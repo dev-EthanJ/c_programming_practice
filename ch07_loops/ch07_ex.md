@@ -95,3 +95,42 @@ int main(void)
 4th
 END: i == 10
 ```
+4. 다음 코드에서 goto문을 제거하고 반복문을 이용해서 같은 결과를 얻을 수 있도록 프로그램을 변경하세요.
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    int nInput;
+
+INPUT:
+    printf("Input Number : ");
+    scanf("%d", &nInput);
+
+    if (nInput < 0 || nInput > 10)
+        goto INPUT;
+
+    puts("END");
+
+    return 0;
+}
+```
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    int nInput;
+
+    do {
+        printf("Input Number : ");
+        scanf("%d", &nInput);
+    
+    } while (nInput < 0 || nInput > 10);
+    puts("END");
+
+    return 0;
+}
+```
